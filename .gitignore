@@ -34,7 +34,7 @@ bld/
 [Ll]ogs/
 .idea/
 .vsconfig
- *Assembly-CSharp.csproj
+ Assembly-CSharp.csproj
 Assets/Resources/
 Library/
 Temp/
