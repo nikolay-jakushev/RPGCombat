@@ -33,6 +33,14 @@ bld/
 [Ll]og/
 [Ll]ogs/
 .idea/
+.vsconfig
+ *Assembly-CSharp.csproj
+Assets/Resources/*
+Library/
+Temp/
+UserSettings/
+ProjectSettings/
+
 
 
 # Visual Studio 2015/2017 cache/options directory

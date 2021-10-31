@@ -32,7 +32,6 @@ namespace RPG.Combat
             target = combatTarget.transform;
         }
 
-
         public void CancleAttack()
         {
             target = null;
