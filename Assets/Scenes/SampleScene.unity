@@ -261,6 +261,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 443022, guid: e0bcb36554be1124b8a89d63037350be, type: 3}
   m_PrefabInstance: {fileID: 1515903829}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &85932605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9207915026171503809, guid: e23a8ecd78ff00a419a7a213372af1e3, type: 3}
+  m_PrefabInstance: {fileID: 9207915026854321933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &85932606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85932605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edaba28f8461462f8333fc8b79aaebba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 100
 --- !u!4 &101890497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 443022, guid: e0bcb36554be1124b8a89d63037350be, type: 3}
@@ -6533,6 +6551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponRange: 2
+  timeBetweenAttacks: 1
+  damageWeapon: 12.4
 --- !u!114 &2098107687334595415
 MonoBehaviour:
   m_ObjectHideFlags: 0
