@@ -41,11 +41,9 @@ namespace RPG.Combat
 
         private void InitAttackAnimation()
         {
-            if (_timeSinceLateAttack > timeBetweenAttacks)
-            {
-                GetComponent<Animator>().SetTrigger("attack");
-                _timeSinceLateAttack = 0;
-            }
+            if (!(_timeSinceLateAttack > timeBetweenAttacks)) return;
+            GetComponent<Animator>().SetTrigger("attack");
+            _timeSinceLateAttack = 0;
         }
 
         private bool GetIsInRange()
