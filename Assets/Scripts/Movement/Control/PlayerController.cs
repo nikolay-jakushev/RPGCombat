@@ -9,11 +9,11 @@ namespace RPG.Control
     {
         private void Update()
         {
-            if (InteractWithCombat()) return;
-            if (InteractWithMovement()) return;
+            if (InitCombat()) return;
+            if (InitMovement()) return;
         }
 
-        private bool InteractWithCombat()
+        private bool InitCombat()
         {
             RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
             foreach (RaycastHit item in hits)
@@ -30,7 +30,7 @@ namespace RPG.Control
             return false;
         }
 
-        private bool InteractWithMovement()
+        private bool InitMovement()
         {
             RaycastHit raycastHit;
             bool hasHit = Physics.Raycast(GetMouseRay(), out raycastHit);
