@@ -46,6 +46,7 @@ namespace RPG.Combat
 
         private void InitAttackAnimation()
         {
+            transform.LookAt(_target.transform);
             if (!(_timeSinceLateAttack > timeBetweenAttacks)) return;
             GetComponent<Animator>().SetTrigger("attack");
             _timeSinceLateAttack = 0;

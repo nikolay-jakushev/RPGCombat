@@ -33,7 +33,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2119273351
+--- !u!114 &5978373360702649251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2310fab573d35334d8b29d6206c05fbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2119273354
+--- !u!114 &7972387020143482533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,7 +60,7 @@ MonoBehaviour:
   weaponRange: 1.5
   timeBetweenAttacks: 1
   damageWeapon: 10.5
---- !u!114 &2119273355
+--- !u!114 &7703566575272876330
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5539977f6ba8e24d95b57deb7edb4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5501659880319600343
+--- !u!114 &2276276948832167922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,6 +228,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2098107687334595417, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
+    - {fileID: 1767058660, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
+    - {fileID: 1767058655, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
+    - {fileID: 5575886482300495621, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
+    - {fileID: 4044199589993454045, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
+    - {fileID: 800568148, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
+    - {fileID: -4876016151823968686, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
 --- !u!1 &8483766784305638191 stripped
 GameObject:
