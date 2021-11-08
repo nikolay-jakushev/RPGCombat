@@ -40,20 +40,40 @@ namespace RPG.Combat
         
         public void Cancel()
         {
-            GetComponent<Animator>().SetTrigger("stopAttack");
+            StopAttack();
             _target = null;
         }
 
+        private void StopAttack()
+        {
+            GetComponent<Animator>().ResetTrigger("attack");
+            GetComponent<Animator>().SetTrigger("stopAttack");
+        }
+
+        public bool CanAttack(CombatTarget combatTarget)
+        {
+            if (combatTarget == null) { return false; }
+            HealthComponent healthComponent = combatTarget.GetComponent<HealthComponent>();
+            return healthComponent != null && !healthComponent.IsDead();
+        }
+        
         private void InitAttackAnimation()
         {
             transform.LookAt(_target.transform);
             if (!(_timeSinceLateAttack > timeBetweenAttacks)) return;
-            GetComponent<Animator>().SetTrigger("attack");
+            TriggerAttack();
             _timeSinceLateAttack = 0;
         }
-        
+
+        private void TriggerAttack()
+        {
+            GetComponent<Animator>().ResetTrigger("stopAttack");
+            GetComponent<Animator>().SetTrigger("attack");
+        }
+
         private void Hit()
         {
+            if(_target == null) { return; }
             _target.TakeDamage(damageWeapon);
         }
 
