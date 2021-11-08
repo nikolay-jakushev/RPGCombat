@@ -1,6 +1,7 @@
 using System;
 using RPG.Combat;
 using RPG.Core;
+using RPG.Movement;
 using UnityEngine;
 
 namespace  RPG.Control
@@ -8,15 +9,22 @@ namespace  RPG.Control
     public class AIController : MonoBehaviour
     {
         [SerializeField] private float _distance = 5f;
+        
         private Fighter _fighter;
         private HealthComponent _healthComponent;
         private GameObject _player;
+        private Mover _mover;
+
+        private Vector3 _position;
 
         private void Start()
         {
             _fighter = GetComponent<Fighter>();
             _healthComponent = GetComponent<HealthComponent>();
+            _mover = GetComponent<Mover>();
             _player = GameObject.FindWithTag("Player");
+
+            _position = transform.position;
         }
 
         private void Update()
@@ -28,7 +36,7 @@ namespace  RPG.Control
             }
             else
             {
-                _fighter.Cancel();
+                _mover.StartMoveAction(_position);
             }
         }
         
@@ -36,6 +44,12 @@ namespace  RPG.Control
         {
             float distancePlayer = Vector3.Distance(_player.transform.position, transform.position);
             return distancePlayer < _distance;
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(transform.position, _distance);
         }
     }
 }

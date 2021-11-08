@@ -33,6 +33,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &527811916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8483766784305638191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f0496e7ccd5c640a2a627804773277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2276276948832167922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponRange: 1.5
   timeBetweenAttacks: 1
-  damageWeapon: 10.5
+  damageWeapon: 3.5
 --- !u!1001 &5456945178765188779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,7 +181,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2098107687334595412, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
       propertyPath: m_Speed
-      value: 7
+      value: 5.6
       objectReference: {fileID: 0}
     - target: {fileID: 2098107687334595412, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
       propertyPath: m_Height
@@ -205,7 +217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7194068970019983522, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 7194068970019983522, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -213,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7194068970019983522, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2814927
+      value: -10.77
       objectReference: {fileID: 0}
     - target: {fileID: 7194068970019983522, guid: 726ada1aabb96a34a87f8a358c6a54bd, type: 3}
       propertyPath: m_LocalRotation.w
