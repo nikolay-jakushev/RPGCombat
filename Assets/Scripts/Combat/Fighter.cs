@@ -11,7 +11,7 @@ namespace RPG.Combat
         [SerializeField] private float damageWeapon = 12.4f;
         
         private HealthComponent _target;
-        private float _timeSinceLateAttack = 0f;
+        private float _timeSinceLateAttack = Mathf.Infinity;
         
         private void Update()
         {
@@ -32,10 +32,17 @@ namespace RPG.Combat
             }
         }
         
-        public void Attack(CombatTarget combatTarget) 
+        public void Attack(GameObject combatTarget) 
         {
              GetComponent<Action>().StartAction(this);
              _target = combatTarget.GetComponent<HealthComponent>();
+        }
+        
+        public bool CanAttack(GameObject combatTarget)
+        {
+            if (combatTarget == null) { return false; }
+            HealthComponent healthComponent = combatTarget.GetComponent<HealthComponent>();
+            return healthComponent != null && !healthComponent.IsDead();
         }
         
         public void Cancel()
@@ -50,13 +57,6 @@ namespace RPG.Combat
             GetComponent<Animator>().SetTrigger("stopAttack");
         }
 
-        public bool CanAttack(CombatTarget combatTarget)
-        {
-            if (combatTarget == null) { return false; }
-            HealthComponent healthComponent = combatTarget.GetComponent<HealthComponent>();
-            return healthComponent != null && !healthComponent.IsDead();
-        }
-        
         private void InitAttackAnimation()
         {
             transform.LookAt(_target.transform);
