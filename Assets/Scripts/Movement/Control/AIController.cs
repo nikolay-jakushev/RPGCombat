@@ -1,14 +1,15 @@
-using System;
 using RPG.Combat;
 using RPG.Core;
 using RPG.Movement;
 using UnityEngine;
+
 
 namespace  RPG.Control
 {
     public class AIController : MonoBehaviour
     {
         [SerializeField] private float _distance = 5f;
+        [SerializeField] private float _time = 5f;
         
         private Fighter _fighter;
         private HealthComponent _healthComponent;
@@ -16,6 +17,7 @@ namespace  RPG.Control
         private Mover _mover;
 
         private Vector3 _position;
+        private float _lastSawPlayer = Mathf.Infinity;
 
         private void Start()
         {
@@ -32,12 +34,33 @@ namespace  RPG.Control
             if(_healthComponent.IsDead()) return;
             if (AttackRangeOfPlayer() && _fighter.CanAttack(_player) )
             {
-                _fighter.Attack(_player);
+                _lastSawPlayer = 0;
+                AttackBehaviour();
+            }
+            else if(_lastSawPlayer < _time)
+            {
+                LastSawPlayer();
             }
             else
             {
-                _mover.StartMoveAction(_position);
+                GuardBehaviour();
             }
+            _lastSawPlayer += Time.deltaTime;
+        }
+
+        private void AttackBehaviour()
+        {
+            _fighter.Attack(_player);
+        }
+
+        private void GuardBehaviour()
+        {
+            _mover.StartMoveAction(_position);
+        }
+
+        private void LastSawPlayer()
+        {
+            GetComponent<Action>().StopAction();
         }
         
         private bool AttackRangeOfPlayer()

@@ -2,7 +2,7 @@
 
 namespace RPG.Core
 {
-    class Action : MonoBehaviour
+     public class Action : MonoBehaviour
     {
         IAction _currentAction;
         public void StartAction(IAction action)
